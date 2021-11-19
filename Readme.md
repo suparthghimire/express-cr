@@ -1,4 +1,4 @@
-# Express-rc
+# Express-cr
 
 CLI tool to Generate Boilerplate Code for creating REST API Routes and Controllers
 
