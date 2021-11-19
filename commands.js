@@ -9,11 +9,26 @@ const { prompt } = require("inquirer");
 program.version("1.0.0").description("Users Mgmt");
 
 // Questions
-const CreateQuestion = [
+const CreateQuestionController = [
   {
     type: "input",
     name: "file_name",
     message: "Name of Controller",
+    validate: (input) => {
+      const split = input.split(" ");
+      if (split.length > 1) return "Names Cannot hava Spaces";
+      const regex = new RegExp(/^[a-zA-Z_ ... ]+$/);
+      const match_regex = regex.test(input);
+      if (!match_regex) return "Name Can only Contain Letters and _ Symbol";
+      return true;
+    },
+  },
+];
+const CreateQuestionRoute = [
+  {
+    type: "input",
+    name: "file_name",
+    message: "Name of Route",
     validate: (input) => {
       const split = input.split(" ");
       if (split.length > 1) return "Names Cannot hava Spaces";
@@ -31,7 +46,7 @@ program
   .description("Create New Controller and Route")
   .option("-c", "--crud", "CRUD Functions Implementation")
   .action((options) => {
-    prompt(CreateQuestion).then((ans) =>
+    prompt(CreateQuestionController).then((ans) =>
       CreateRouteController(ans.file_name, options)
     );
   });
@@ -41,7 +56,7 @@ program
   .description("Create New Controller")
   .option("-c", "--crud", "CRUD Functions Implementation")
   .action((options) => {
-    prompt(CreateQuestion).then((ans) => {
+    prompt(CreateQuestionController).then((ans) => {
       CreateController(ans.file_name, options);
     });
   });
@@ -51,7 +66,7 @@ program
   .description("Create New Route")
   .option("-c", "--crud", "CRUD Functions Implementation")
   .action((options) => {
-    prompt(CreateQuestion).then((ans) => {
+    prompt(CreateQuestionRoute).then((ans) => {
       CreateRoute(ans.file_name, options);
     });
   });

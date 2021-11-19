@@ -1,12 +1,12 @@
 {
     "name": "express-cr",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "Route Controller Generator for Node(Express) Applications",
     "main": "index.js",
     "preferGlobal": true,
     "bin": "./commands.js",
     "keywords": [
-        "rc",
+        "cr",
         "route",
         "api",
         "controller"
