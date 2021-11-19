@@ -1,0 +1,21 @@
+{
+    "name": "express-rc",
+    "version": "1.0.0",
+    "description": "Route Controller Generator for Node(Express) Applications",
+    "main": "index.js",
+    "preferGlobal": true,
+    "bin": "./commands.js",
+    "keywords": [
+        "rc",
+        "route",
+        "api",
+        "controller"
+    ],
+    "scripts": {},
+    "author": "Suparth Narayan Ghimire",
+    "license": "ISC",
+    "dependencies": {
+        "commander": "^8.3.0",
+        "inquirer": "^8.2.0"
+    }
+}
