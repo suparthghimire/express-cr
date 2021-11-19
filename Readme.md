@@ -15,7 +15,7 @@ router.delete("/endpoint/:id", Controller.Method);
 
 Specially if the application is very Large, and there are alot of routes to create, this gives unnecessary headache while development. This only is route creation. Creating controllers for these routes is even more tiresome.
 
-Express-rc package removes this headache by allowing you to generate these files on the fly with a simple command.
+Express-cr package removes this headache by allowing you to generate these files on the fly with a simple command.
 
 ## Requirements
 
@@ -31,18 +31,18 @@ The Application Runs on Node JS v10x and above. The tool is made for Express Fra
 Installation Globally
 
 ```bash
-$ npm install -g express-rc
+$ npm install -g express-cr
 ```
 
 Installation In as Dev Dependency
 
 ```bash
-$ npm install --global express-rc
+$ npm install --global express-cr
 ```
 
 ## File Generation
 
-The file structure adopted by express-rc is as below:
+The file structure adopted by express-cr is as below:
 
 ```folter
 root
@@ -99,4 +99,4 @@ $ express-cr r:create -c
   ? Name of Route: Name
 ```
 
-[GitHub](https://github.com/suparthghimire/express-rc)
+[GitHub](https://github.com/suparthghimire/express-cr)
