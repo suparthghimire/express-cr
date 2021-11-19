@@ -31,13 +31,13 @@ The Application Runs on Node JS v10x and above. The tool is made for Express Fra
 Installation Globally
 
 ```bash
-$ npm install -g express-cr
+$ npm install --global express-cr
 ```
 
 Installation In as Dev Dependency
 
 ```bash
-$ npm install --global express-cr
+$ npm install --save-dev express-cr
 ```
 
 ## File Generation
