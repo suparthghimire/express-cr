@@ -1,5 +1,5 @@
 {
-    "name": "express-rc",
+    "name": "express-cr",
     "version": "1.0.0",
     "description": "Route Controller Generator for Node(Express) Applications",
     "main": "index.js",
