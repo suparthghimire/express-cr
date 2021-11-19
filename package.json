@@ -1,6 +1,6 @@
 {
     "name": "express-cr",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Route Controller Generator for Node(Express) Applications",
     "main": "index.js",
     "preferGlobal": true,
