@@ -76,7 +76,11 @@ const ${name}Controller = require("../controllers/${name}Controller");
 ${functions_crud
   .map((fn) => {
     return `
-router.${fn.method}("/${fn.name}",${name}Controller.${fn.name});
+router.${fn.method}("/${fn.name}/${fn.params
+      .map((param) => {
+        return `:${param}/`;
+      })
+      .join("")}",${name}Controller.${fn.name});
 `;
   })
   .join("")}
